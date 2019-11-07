@@ -9,49 +9,122 @@ body{
 .wrapper-title{
     display: flex;
     align-items: center;
-    flex-direction: column;
+	flex-direction: column;
 }
 
 h1{
     font-family: 'PT Sans', sans-serif;
     font-size: 4rem;
 	margin-top: 0;
-	text-shadow: 0px 0px 13px white;
+	text-shadow: 0px 0px 10px white;
 	z-index: 1;
 }
 
 h2{
-    font-family: 'Lora', serif;
+	font-family: 'Lora', serif;
+	letter-spacing: 7px;
 	margin-bottom: 0;
 	text-shadow: 0px 0px 13px white;
 	z-index: 1;
 }
 
-.wrapper-piano{
-    display: flex;
-	flex-direction: row;
-	margin-left: 20vw;
-	margin-right: 20vw;
-	margin-bottom: 20px;
+.wrapper-keys-piano{
+	display: flex;
+	flex-direction: column;
 }
 
-.c1, .d1, .e1, .f1, .g1, .a1, .b1, .c1{
-	width: 9vw;
-	height: 20vw;
+.wrapper-keys{
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	position: relative;
+	bottom: 31vh;
+	margin-left: 27vw;
+	margin-right: 27vw;
+}
+
+.key{
+	width: 3vw;
+	height: 100%;
+	margin: 0.3vw;
+	background-color: rgba(95, 95, 95, 0.61);
+	border-radius: 2px;
+	box-shadow: 2px 2px 5px grey;
+	text-align: center;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1rem;
+	color: whitesmoke;
+}
+
+.wrapper-piano{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	position: relative;
+	bottom: 30vh;
+	margin-left: 20vw;
+	margin-right: 20vw;
+}
+
+.c1, .d1, .e1, .f1, .g1, .a1, .b1, .c2{
+	width: 6vw;
+	height: 25vw;
+	margin-right: 1px;
 	background-color: ivory;
-	/* border: grey solid 1px; */
-	box-shadow: 1px 1px 5px grey;
+	box-shadow: 2px 2px 5px grey;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
 
 .ciss1, .diss1, .fiss1, .giss1, .aiss1{
-	position: position;
-	width: 6vw;
-	height: 28vh;
+	position: relative;
+	left: 4.5vw;
+	width: 3vw;
+	height: 65%;
 	background-color: black;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+}
+
+.ciss1:hover, .diss1:hover, .fiss1:hover, .giss1:hover, .aiss1:hover{
+	position: relative;
+	left: 4.5vw;
+	width: 3vw;
+	height: 65%;
+	background-color: tomato;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.ciss1:active, .diss1:active, .fiss1:active, .giss1:active, .aiss1:active{
+	position: relative;
+	left: 4.5vw;
+	width: 3vw;
+	height: 65%;
+	background-color: rgb(184, 55, 32);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.c1:hover, .d1:hover, .e1:hover, .f1:hover, .g1:hover, .a1:hover, .b1:hover, .c2:hover {
+	/* transform: rotate(-2deg); */
+	transform-origin: top center;
+	background-color: tomato;
+  }
+
+.c1:active, .d1:active, .e1:active, .f1:active, .g1:active, .a1:active, .b1:active, .c2:active {
+/* transform: rotate(-2deg); */
+transform-origin: top center;
+background-color: rgb(184, 55, 32);
+}
+
+.shine{
+	width: 80%;
+	height: 95%;
+	margin-right: 10%;
+	box-shadow: 1px 1px 4px rgba(245, 245, 245, 0.705);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
 }
 
 /* -----------CLOUD ANIMATION------------- */
@@ -106,6 +179,7 @@ body {
 	-webkit-animation: moveclouds 15s linear infinite;
 	-moz-animation: moveclouds 15s linear infinite;
 	-o-animation: moveclouds 15s linear infinite;
+	opacity: 0.6; /*opacity proportional to the size*/
 }
 
 /*variable speed, opacity, and position of clouds for realistic effect*/
@@ -115,7 +189,7 @@ body {
 	-webkit-transform: scale(0.6);
 	-moz-transform: scale(0.6);
 	transform: scale(0.6);
-	opacity: 0.6; /*opacity proportional to the size*/
+	opacity: 0.4; /*opacity proportional to the size*/
 	
 	/*Speed will also be proportional to the size and opacity*/
 	/*More the speed. Less the time in 's' = seconds*/
@@ -130,7 +204,7 @@ body {
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
 	transform: scale(0.8);
-	opacity: 0.8; /*opacity proportional to the size*/
+	opacity: 0.6; /*opacity proportional to the size*/
 	
 	-webkit-animation: moveclouds 20s linear infinite;
 	-moz-animation: moveclouds 20s linear infinite;
@@ -143,7 +217,7 @@ body {
 	-webkit-transform: scale(0.75);
 	-moz-transform: scale(0.75);
 	transform: scale(0.75);
-	opacity: 0.75; /*opacity proportional to the size*/
+	opacity: 0.55; /*opacity proportional to the size*/
 	
 	-webkit-animation: moveclouds 18s linear infinite;
 	-moz-animation: moveclouds 18s linear infinite;
@@ -156,7 +230,7 @@ body {
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
 	transform: scale(0.8);
-	opacity: 0.8; /*opacity proportional to the size*/
+	opacity: 0.6; /*opacity proportional to the size*/
 	
 	-webkit-animation: moveclouds 20s linear infinite;
 	-moz-animation: moveclouds 20s linear infinite;
