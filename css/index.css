@@ -28,9 +28,89 @@ h2{
 	z-index: 1;
 }
 
+@-webkit-keyframes hvr-bob {
+	0% {
+		-webkit-transform: translateY(-8px);
+		transform: translateY(-8px);
+	}
+	50% {
+		-webkit-transform: translateY(-4px);
+		transform: translateY(-4px);
+		transform: translateX(-4px);
+	}
+	100% {
+		-webkit-transform: translateY(-8px);
+		transform: translateY(-8px);
+	}
+	}
+	@keyframes hvr-bob {
+	0% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+	50% {
+		-webkit-transform: translateY(-3px);
+		transform: translateY(-3px);
+		transform: translateX(-1px);
+	}
+	100% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+	}
+	@-webkit-keyframes hvr-bob-float {
+	100% {
+		-webkit-transform: translateY(-8px);
+		transform: translateY(-8px);
+	}
+	}
+	@keyframes hvr-bob-float {
+	100% {
+		-webkit-transform: translateY(-8px);
+		transform: translateY(-8px);
+	}
+	}
+
+.hvr-bob{
+	-webkit-animation-name: hvr-bob-float, hvr-bob;
+	animation-name: hvr-bob-float, hvr-bob;
+	-webkit-animation-duration: .3s, 1.5s;
+	animation-duration: .3s, 3s;
+	-webkit-animation-delay: 0s, .3s;
+	animation-delay: 0s, .3s;
+	-webkit-animation-timing-function: ease-out, ease-in-out;
+	animation-timing-function: ease-out, ease-in-out;
+	-webkit-animation-iteration-count: 1, infinite;
+	animation-iteration-count: 1, infinite;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-direction: normal, alternate;
+	animation-direction: normal, alternate;
+}
+
+.hvr-icon-grow-rotate:hover, .hvr-icon-grow-rotate:focus, .hvr-icon-grow-rotate:active{
+	-webkit-transform: scale(1.5) rotate(12deg);
+	transform: scale(1.5) rotate(12deg);
+}
+
 .wrapper-keys-piano{
 	display: flex;
 	flex-direction: column;
+}
+
+.rythm{
+	align-self: center;
+	position: relative;
+	bottom: 31vh;
+	height: 6vw;
+	width: 6vw;
+	background-image: url(https://www.dropbox.com/s/mkwz8ldzt2lvmtg/drum.png?raw=1);
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 2px 2px 5px grey;
+	border-radius: 1vw;
 }
 
 .wrapper-keys{
