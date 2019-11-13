@@ -1,9 +1,3 @@
-// function stopRepeat(){
-//     window.addEventListener('keydown', e => { 
-//         if (e.repeat) return; 
-//     }, false)
-// }
-
 function piano(){
     
     var keyToPitch = { "a":"C4", "w":"C#4", "s":"D4", "e":"D#4", "d":"E4", "f":"F4", "t":"F#4", "g":"G4", "y":"G#4", "h":"A4", "u":"A#4", "j":"B4", "k":"C5" }
@@ -137,10 +131,44 @@ function snare(){
     
 }
 
-// stopRepeat()
+function hihat(){
+
+    var gain = new Tone.Gain(0.05)
+    var dist = new Tone.Distortion(0.2)
+    var hihat = new Tone.MembraneSynth({
+        envelope: {
+            attack: 0.001,
+            decay: 0.01,
+            sustain: 0,
+            release: 0.05
+        }
+      })
+    hihat.chain(gain, dist, Tone.Master)
+    var loop = new Tone.Loop(function(time){
+        hihat.triggerAttackRelease("G5", "8n");
+    }, "8n").start(0);
+    loop.mute = true
+    loop.start(0)
+
+    let hihatButton = document.querySelector(".hihat")
+    hihatButton.addEventListener("click", e => {
+        if(loop.mute == true){
+            loop.mute = false
+            Tone.Transport.start();
+            hihatButton.style.backgroundImage = "url(https://www.dropbox.com/s/nc1aas1yk3o6tox/play.png?raw=1)"
+        }else{
+            loop.mute = true
+            hihatButton.style.backgroundImage = "url(https://www.dropbox.com/s/4t8lwnhfa4bcfh2/hihat.png?raw=1)"
+        }
+    })
+    
+}
+
+
 piano()
 kick()
 snare()
+hihat()
 
 // let c = document.querySelector("body")
 // c.addEventListener("click", function(){
