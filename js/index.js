@@ -60,11 +60,11 @@ function piano(){
 // -----------------MOUSE CLICK-----------------
 
     let keys = document.querySelectorAll("section")
-    for(let k of keys){
-        addEventListener("mousedown", e => {
+    for(var k = 0; k < keys.length; k++){
+        keys[k].addEventListener("mousedown", e => {
             polySynth.triggerAttackRelease(elementToPitch)
         })
-        addEventListener("mouseup", e => {
+        keys[k].addEventListener("mouseup", e => {
             polySynth.triggerRelease()
         })
     }
@@ -83,14 +83,18 @@ function kick(){
     var loop = new Tone.Loop(function(time){
         kick.triggerAttackRelease("C2", "4n");
     }, "4n").start(0);
-    Tone.Transport.start();
-    
+    loop.mute = true
+    loop.start(0)
+
     let kickbutton = document.querySelector(".kick")
     kickbutton.addEventListener("click", e => {
-        if(loop.state == "stopped"){
-            loop.start(0);
+        if(loop.mute == true){
+            loop.mute = false
+            Tone.Transport.start();
+            kickbutton.style.backgroundImage = "url(https://www.dropbox.com/s/nc1aas1yk3o6tox/play.png?raw=1)"
         }else{
-            loop.stop(0)
+            loop.mute = true
+            kickbutton.style.backgroundImage = "url(https://www.dropbox.com/s/pi6ra58qvowk8l2/kick.png?raw=1)"
         }
     })
     
@@ -116,14 +120,18 @@ function snare(){
     var loop = new Tone.Loop(function(time){
         snare.triggerAttackRelease("G3", "8n");
     }, "2n").start(0);
-    Tone.Transport.start();
-    
-    let kickbutton = document.querySelector(".snare")
-    kickbutton.addEventListener("click", e => {
-        if(loop.state == "stopped"){
-            loop.start(0);
+    loop.mute = true
+    loop.start(0)
+
+    let snarebutton = document.querySelector(".snare")
+    snarebutton.addEventListener("click", e => {
+        if(loop.mute == true){
+            loop.mute = false
+            Tone.Transport.start();
+            snarebutton.style.backgroundImage = "url(https://www.dropbox.com/s/nc1aas1yk3o6tox/play.png?raw=1)"
         }else{
-            loop.stop(0)
+            loop.mute = true
+            snarebutton.style.backgroundImage = "url(https://www.dropbox.com/s/mkwz8ldzt2lvmtg/snare.png?raw=1)"
         }
     })
     
@@ -134,7 +142,7 @@ piano()
 kick()
 snare()
 
-// let c = document.querySelector(".wrapper-white")
+// let c = document.querySelector("body")
 // c.addEventListener("click", function(){
 //     if (Tone.context.state !== 'running') {
 //         Tone.context.resume();
