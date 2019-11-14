@@ -26,7 +26,7 @@ function piano(){
           release: 4
         }
     })
-    polySynth.chain(gain, filter, chorus, freeverb, delay, Tone.Master)
+    polySynth.chain(filter, chorus, freeverb, delay, gain, Tone.Master)
 
 // ----------------KEYBOARD--------------------
 
@@ -34,10 +34,8 @@ function piano(){
     window.addEventListener('keydown', e => {
         if(Object.keys(keyToPitch).includes(e.key)){
             polySynth.triggerAttack(keyToPitch[e.key])
-            let keysWhite = document.querySelector(keyToElement[e.key])
-            keysWhite.classList.add("key-white-push")
-            let keysBlack = document.querySelector(keyToElementBlack[e.key])
-            keysBlack.classList.add("key-black-push")
+            let keys = document.querySelector(keyToElement[e.key])
+            keys.classList.add("pushed")
         }else{
             return
         }
@@ -46,10 +44,8 @@ function piano(){
     
     window.addEventListener('keyup', e => {
         polySynth.triggerRelease(keyToPitch[e.key])
-        let keysWhite = document.querySelector(keyToElement[e.key])
-        keysWhite.classList.remove("key-white-push")
-        let keysBlack = document.querySelector(keyToElementBlack[e.key])
-        keysBlack.classList.remove("key-black-push")
+        let keys = document.querySelector(keyToElement[e.key])
+        keys.classList.remove("pushed")
     })
 
 // -----------------MOUSE CLICK-----------------

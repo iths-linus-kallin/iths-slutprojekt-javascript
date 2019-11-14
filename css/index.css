@@ -10,10 +10,10 @@ body{
     display: flex;
     align-items: center;
 	flex-direction: column;
-	height: 30vh;
+	height: 20vh;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: center -40px;
+	background-position: center -20px;
 	background-image: url(https://www.dropbox.com/s/vokpxukffsay0o0/cloud.png?raw=1);
 }
 
@@ -235,12 +235,33 @@ h1:hover{
 	position: relative;
 	width: 2vw;
 	height: 20%;
-	margin: 0.3vw;
 	text-align: center;
 	font-family: 'PT Sans', sans-serif;
 	font-size: 1.6vw;
 	color: rgba(255, 255, 255, 0.9);
 	user-select: none;
+}
+
+.key-black.pushed{
+	position: relative;
+	left: 4.5vw;
+	bottom: 25vw;
+	width: 3vw;
+	height: 65%;
+	background-color: rgb(184, 55, 32);
+	box-shadow: 2px 2px 5px grey;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+
+.key-white.pushed{
+	width: 6vw;
+	height: 25vw;
+	margin-right: 1px;
+	background-color: rgb(184, 55, 32);
+	box-shadow: 2px 2px 5px grey;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 section{
@@ -270,16 +291,6 @@ section{
 	height: 25vw;
 	margin-right: 1px;
 	background-color: ivory;
-	box-shadow: 2px 2px 5px grey;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-
-.key-white-push{
-	width: 6vw;
-	height: 25vw;
-	margin-right: 1px;
-	background-color: rgb(184, 55, 32);
 	box-shadow: 2px 2px 5px grey;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
@@ -323,18 +334,6 @@ section{
 	width: 3vw;
 	height: 65%;
 	background-color: black;
-	border-bottom-left-radius: 7px;
-	border-bottom-right-radius: 7px;
-}
-
-.key-black-push{
-	position: relative;
-	left: 4.5vw;
-	bottom: 25vw;
-	width: 3vw;
-	height: 65%;
-	background-color: rgb(184, 55, 32);
-	box-shadow: 2px 2px 5px grey;
 	border-bottom-left-radius: 7px;
 	border-bottom-right-radius: 7px;
 }
