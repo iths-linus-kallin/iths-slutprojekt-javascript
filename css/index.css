@@ -10,11 +10,16 @@ body{
     display: flex;
     align-items: center;
 	flex-direction: column;
+	height: 30vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center -40px;
+	background-image: url(https://www.dropbox.com/s/vokpxukffsay0o0/cloud.png?raw=1);
 }
 
 h1{
     font-family: 'PT Sans', sans-serif;
-    font-size: 4rem;
+	font-size: 4rem;
 	margin-top: 0;
 	text-shadow: 5px 5px 7px white, -5px -5px 7px white, -5px 5px 7px white, 5px -5px 7px white;
 	z-index: 1;
@@ -49,8 +54,8 @@ h2{
 .hvr-bob{
 	-webkit-animation-name: hvr-bob-float, hvr-bob;
 	animation-name: hvr-bob-float, hvr-bob;
-	-webkit-animation-duration: .3s, 1.5s;
-	animation-duration: .3s, 3s;
+	-webkit-animation-duration: .3s, 5s;
+	animation-duration: .3s, 5s;
 	-webkit-animation-delay: 0s, .3s;
 	animation-delay: 0s, .3s;
 	-webkit-animation-timing-function: ease-out, ease-in-out;
@@ -112,8 +117,6 @@ h1:hover{
 
 .wrapper-button{
 	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
 	margin-left: 25.4vw;
 	margin-right: 25.4vw;
 	position: relative;
@@ -166,6 +169,36 @@ h1:hover{
 	width: 6vw;
 	margin-left: 1vw;
 	background-image: url(https://www.dropbox.com/s/4t8lwnhfa4bcfh2/hihat.png?raw=1);
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 2px 2px 5px grey;
+	border-radius: 1vw;
+}
+
+.button-right{
+	justify-self: flex-end;
+}
+
+.sound1{
+	height: 6vw;
+	width: 6vw;
+	margin-left: 1vw;
+	background-image: url(https://www.dropbox.com/s/woh69exuw7yscn9/notes.png?raw=1);
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 2px 2px 5px grey;
+	border-radius: 1vw;
+}
+
+.sound2{
+	height: 6vw;
+	width: 6vw;
+	margin-left: 1vw;
+	background-image: url(https://www.dropbox.com/s/woh69exuw7yscn9/notes.png?raw=1);
 	background-size: 80%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -242,6 +275,15 @@ section{
 	border-bottom-right-radius: 5px;
 }
 
+.key-white-push{
+	width: 6vw;
+	height: 25vw;
+	margin-right: 1px;
+	background-color: rgb(184, 55, 32);
+	box-shadow: 2px 2px 5px grey;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
 
 .c1:hover, .d1:hover, .e1:hover, .f1:hover, .g1:hover, .a1:hover, .b1:hover, .c2:hover {
 	/* transform: rotate(-2deg); */
@@ -281,6 +323,18 @@ section{
 	width: 3vw;
 	height: 65%;
 	background-color: black;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+
+.key-black-push{
+	position: relative;
+	left: 4.5vw;
+	bottom: 25vw;
+	width: 3vw;
+	height: 65%;
+	background-color: rgb(184, 55, 32);
+	box-shadow: 2px 2px 5px grey;
 	border-bottom-left-radius: 7px;
 	border-bottom-right-radius: 7px;
 }
