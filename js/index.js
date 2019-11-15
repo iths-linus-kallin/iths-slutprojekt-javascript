@@ -8,10 +8,10 @@ function piano(){
     var keyToElementBlack = { "w":".ciss1", "e":".diss1", "t":".fiss1", "y":".giss1", "u":".aiss1" }
 
     var gain = new Tone.Gain(0.05)
-    // var freeverb = new Tone.Freeverb()
-    // freeverb.dampening.value = 2000;
-    // freeverb.roomSize.value = 0.8;
-    // freeverb.wet.value = 0.5
+    var freeverb = new Tone.Freeverb()
+    freeverb.dampening.value = 2000;
+    freeverb.roomSize.value = 0.8;
+    freeverb.wet.value = 0.5
     var filter = new Tone.Filter(3000, "lowpass", -12)
     var chorus = new Tone.Chorus(4, 2.5, 0.04)
     var delay = new Tone.FeedbackDelay("8n", 0.2)
