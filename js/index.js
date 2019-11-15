@@ -1,4 +1,5 @@
 var polySynth = new Tone.PolySynth(3, Tone.Synth)
+Tone.context.lookAhead = 0
 
 function piano(){
     
@@ -43,9 +44,13 @@ function piano(){
 
     
     window.addEventListener('keyup', e => {
-        polySynth.triggerRelease(keyToPitch[e.key])
-        let keys = document.querySelector(keyToElement[e.key])
-        keys.classList.remove("pushed")
+        if(Object.keys(keyToPitch).includes(e.key)){
+            polySynth.triggerRelease(keyToPitch[e.key])
+            let keys = document.querySelector(keyToElement[e.key])
+            keys.classList.remove("pushed")
+        }else{
+            return
+        }
     })
 
 // -----------------MOUSE CLICK-----------------
@@ -201,10 +206,10 @@ snare()
 hihat()
 changeSound()
 
-let c = document.querySelector("body")
-c.addEventListener("click", function(){
-    if (Tone.context.state !== 'running') {
-        Tone.context.resume();
-      }
-    piano()
-})
+// let c = document.querySelector("body")
+// c.addEventListener("click", function(){
+//     if (Tone.context.state !== 'running') {
+//         Tone.context.resume();
+//       }
+//     piano()
+// })
