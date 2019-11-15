@@ -117,10 +117,22 @@ h1:hover{
 
 .wrapper-button{
 	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	margin-left: 25.4vw;
 	margin-right: 25.4vw;
 	position: relative;
 	bottom: 31vh;
+}
+
+.buttons-left{
+	display: flex;
+	flex-direction: row;
+}
+
+.buttons-right{
+	display: flex;
+	flex-direction: row;
 }
 
 .wrapper-button p{
@@ -175,10 +187,6 @@ h1:hover{
 	background-color: rgba(255, 255, 255, 0.5);
 	box-shadow: 2px 2px 5px grey;
 	border-radius: 1vw;
-}
-
-.button-right{
-	justify-self: flex-end;
 }
 
 .sound1{

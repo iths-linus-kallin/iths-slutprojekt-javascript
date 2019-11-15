@@ -33,6 +33,7 @@ function piano(){
 
     var down = false;
     window.addEventListener('keydown', e => {
+        if(e.repeat) {return}
         if(Object.keys(keyToPitch).includes(e.key)){
             polySynth.triggerAttack(keyToPitch[e.key])
             let keys = document.querySelector(keyToElement[e.key])
