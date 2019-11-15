@@ -141,6 +141,7 @@ h1:hover{
 	font-size: 1.6vw;
 	margin-left: 1vw;
 	margin-bottom: 1vw;
+	user-select: none;
 }
 
 .kick:hover, .snare:hover, .hihat:hover{
