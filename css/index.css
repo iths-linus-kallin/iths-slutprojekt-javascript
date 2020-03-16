@@ -104,6 +104,7 @@ h2{
 .hvr-icon-grow-rotate:hover{
 	-webkit-transform: scale(1.05) rotate(2deg);
 	transform: scale(1.05) rotate(2deg);
+	animation-duration: 1s;
 }
 
 h1:hover{
@@ -111,6 +112,7 @@ h1:hover{
 }
 
 .wrapper-keys-piano{
+	margin-top: 10vh;
 	display: flex;
 	flex-direction: column;
 }
