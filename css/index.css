@@ -501,6 +501,10 @@ body {
 
 @media only screen and (max-width: 800px){
 
+	.cloud{
+		visibility: hidden;
+	}
+
 	.wrapper-title{
 		display: flex;
 		align-items: center;
@@ -696,6 +700,10 @@ body {
 		color: black;
 		user-select: none;
 	}
+
+	.key-black p{
+		visibility: hidden;
+	}
 	
 	.key-black.pushed{
 		position: relative;
@@ -710,6 +718,10 @@ body {
 		color: rgb(184, 55, 32);
 	}
 	
+.key-white p{
+	visibility: hidden;
+}
+
 	.key-white.pushed{
 		width: 12vw;
 		height: 50vw;
@@ -718,6 +730,7 @@ body {
 		box-shadow: 2px 2px 5px grey;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
+		color: rgb(184, 55, 32);
 	}
 	
 	section{
@@ -751,6 +764,7 @@ body {
 		box-shadow: 2px 2px 5px grey;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
+		color: ivory;
 	}
 	
 	.c1:hover, .d1:hover, .e1:hover, .f1:hover, .g1:hover, .a1:hover, .b1:hover, .c2:hover {
@@ -795,6 +809,7 @@ body {
 		background-color: black;
 		border-bottom-left-radius: 7px;
 		border-bottom-right-radius: 7px;
+		color: rgb(184, 55, 32);
 	}
 	
 	.ciss1:hover, .diss1:hover, .fiss1:hover, .giss1:hover, .aiss1:hover{
@@ -805,6 +820,7 @@ body {
 		background-color: tomato;
 		border-bottom-left-radius: 7px;
 		border-bottom-right-radius: 7px;
+		color: tomato;
 	}
 	
 	.ciss1:active, .diss1:active, .fiss1:active, .giss1:active, .aiss1:active{
