@@ -523,6 +523,7 @@ body {
 		text-shadow: 5px 5px 7px white, -5px -5px 7px white, -5px 5px 7px white, 5px -5px 7px white;
 		z-index: 1;
 		user-select: none;
+		color: black;
 	}
 	
 	h2{
