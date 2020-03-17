@@ -501,8 +501,12 @@ body {
 
 @media only screen and (max-width: 800px){
 
+	.wrapper-keys-piano{
+		margin-top: 30vh;
+	}
+	
 	.cloud{
-		visibility: hidden;
+		display: none;
 	}
 
 	.wrapper-title{
