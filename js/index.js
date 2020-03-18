@@ -7,7 +7,7 @@ function piano(){
     var keyToElement = { "a":".c1", "w":".ciss1", "s":".d1", "e":".diss1", "d":".e1", "f":".f1", "t":".fiss1", "g":".g1", "y":".giss1", "h":".a1", "u":".aiss1", "j":".b1", "k":".c2" }
     var keyToElementBlack = { "w":".ciss1", "e":".diss1", "t":".fiss1", "y":".giss1", "u":".aiss1" }
 
-    var gain = new Tone.Gain(0.2)
+    var gain = new Tone.Gain(0.4)
     var freeverb = new Tone.Freeverb()
     freeverb.dampening.value = 2000;
     freeverb.roomSize.value = 0.8;
