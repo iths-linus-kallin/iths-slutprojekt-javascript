@@ -723,9 +723,9 @@ body {
 		color: rgb(184, 55, 32);
 	}
 	
-.key-white p{
-	visibility: hidden;
-}
+	.key-white p{
+		visibility: hidden;
+	}
 
 	.key-white.pushed{
 		width: 12vw;
@@ -909,7 +909,7 @@ body {
 	.wrapper-button p{
 		text-align: center;
 		font-family: 'PT Sans', sans-serif;
-		font-size: 2.5vw;
+		font-size: 1.5vw;
 		margin-left: 1vw;
 		margin-bottom: 1vw;
 		user-select: none;
@@ -921,8 +921,8 @@ body {
 	
 	.kick{
 		align-self: flex-start;
-		height: 8vw;
-		width: 8vw;
+		height: 6vw;
+		width: 6vw;
 		background-image: url(https://www.dropbox.com/s/pi6ra58qvowk8l2/kick.png?raw=1);
 		background-size: 80%;
 		background-repeat: no-repeat;
@@ -935,8 +935,8 @@ body {
 		
 	.snare{
 		align-self: flex-start;
-		height: 8vw;
-		width: 8vw;
+		height: 6vw;
+		width: 6vw;
 		margin-left: 1vw;
 		background-image: url(https://www.dropbox.com/s/mkwz8ldzt2lvmtg/snare.png?raw=1);
 		background-size: 80%;
@@ -949,8 +949,8 @@ body {
 	
 	.hihat{
 		align-self: flex-start;
-		height: 8vw;
-		width: 8vw;
+		height: 6vw;
+		width: 6vw;
 		margin-left: 1vw;
 		background-image: url(https://www.dropbox.com/s/4t8lwnhfa4bcfh2/hihat.png?raw=1);
 		background-size: 80%;
@@ -962,8 +962,8 @@ body {
 	}
 	
 	.sound1{
-		height: 8vw;
-		width: 8vw;
+		height: 6vw;
+		width: 6vw;
 		margin-left: 1vw;
 		background-image: url(https://www.dropbox.com/s/woh69exuw7yscn9/notes.png?raw=1);
 		background-size: 80%;
@@ -975,8 +975,8 @@ body {
 	}
 	
 	.sound2{
-		height: 8vw;
-		width: 8vw;
+		height: 6vw;
+		width: 6vw;
 		margin-left: 1vw;
 		background-image: url(https://www.dropbox.com/s/woh69exuw7yscn9/notes.png?raw=1);
 		background-size: 80%;
@@ -991,10 +991,10 @@ body {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		margin-left: 5vw;
-		margin-right: 5vw;
+		margin-left: 10vw;
+		margin-right: 10vw;
 		position: relative;
-		bottom: 31vh;
+		top: 0vh;
 	}
 
 	.wrapper-keys{
@@ -1002,9 +1002,9 @@ body {
 		justify-content: space-evenly;
 		flex-direction: row;
 		position: relative;
-		bottom: 0vh;
-		margin-left: 5vw;
-		margin-right: 5vw;
+		top: 0vh;
+		margin-left: 10vw;
+		margin-right: 10vw;
 	}
 
 	.wrapper-white{
@@ -1012,9 +1012,9 @@ body {
 		justify-content: center;
 		flex-direction: row;
 		position: relative;
-		bottom: 0vh;
-		margin-left: 5vw;
-		margin-right: 5vw;
+		top: 4vh;
+		margin-left: 10vw;
+		margin-right: 10vw;
 	}
 
 	.wrapper-black{
@@ -1022,9 +1022,9 @@ body {
 		justify-content: center;
 		flex-direction: row;
 		position: relative;
-		bottom: 30vh;
-		margin-left: 5vw;
-		margin-right: 5vw;
+		top: 47.3vh;
+		margin-left: 10vw;
+		margin-right: 10vw;
 	}
 
 	.key{
@@ -1069,9 +1069,9 @@ body {
 		color: rgb(184, 55, 32);
 	}
 	
-.key-white p{
-	visibility: hidden;
-}
+	.key-white p{
+		visibility: hidden;
+	}
 
 	.key-white.pushed{
 		width: 12vw;
@@ -1103,13 +1103,13 @@ body {
 		flex-direction: row;
 		position: relative;
 		bottom: 30vh;
-		margin-left: 5vw;
-		margin-right: 5vw;
+		margin-left: 10vw;
+		margin-right: 10vw;
 	}
 	
 	.c1, .d1, .e1, .f1, .g1, .a1, .b1, .c2{
-		width: 12vw;
-		height: 50vw;
+		width: 10vw;
+		height: 30vw;
 		margin-right: 1px;
 		background-color: ivory;
 		box-shadow: 2px 2px 5px grey;
@@ -1147,16 +1147,16 @@ body {
 		flex-direction: row;
 		position: relative;
 		bottom: 30vh;
-		margin-left: 8.5vw;
-		margin-right: 1vw;
+		margin-left: 9vw;
+		margin-right: 11vw;
 	}
 	
 	.ciss1, .diss1, .fiss1, .giss1, .aiss1{
 		position: relative;
-		left: 4.5vw;
+		left: 8vw;
 		bottom: 50vw;
 		width: 6vw;
-		height: 65%;
+		height: 40%;
 		background-color: black;
 		border-bottom-left-radius: 7px;
 		border-bottom-right-radius: 7px;
@@ -1165,9 +1165,9 @@ body {
 	
 	.ciss1:hover, .diss1:hover, .fiss1:hover, .giss1:hover, .aiss1:hover{
 		position: relative;
-		left: 4.5vw;
+		left: 8vw;
 		width: 6vw;
-		height: 65%;
+		height: 40%;
 		background-color: tomato;
 		border-bottom-left-radius: 7px;
 		border-bottom-right-radius: 7px;
@@ -1176,9 +1176,9 @@ body {
 	
 	.ciss1:active, .diss1:active, .fiss1:active, .giss1:active, .aiss1:active{
 		position: relative;
-		left: 4.5vw;
+		left: 8vw;
 		width: 6vw;
-		height: 65%;
+		height: 40%;
 		background-color:rgb(184, 55, 32);
 		border-bottom-left-radius: 7px;
 		border-bottom-right-radius: 7px;
